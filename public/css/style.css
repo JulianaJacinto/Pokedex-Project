@@ -1,0 +1,422 @@
+/* Variáveis de cores e tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+/* Variáveis de cores */
+:root {
+  --primary-red: #DA1212;
+  --primary-yellow: #ffca28;
+  --primary-blue: #11468F;
+  --secondary-blue: #041562;
+  --background: #EEEEEE;
+  --white: #ffffff;
+  --gray: #8a8a8a;
+  --dark: #101010;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jersey 15', sans-serif;
+  text-decoration: none;
+}
+
+*::selection{
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+*::-webkit-scrollbar{
+  width: 10px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+}
+
+/* Fonte geral */
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(#d5d5d5 2px, transparent 0px);
+  background-size: 10px 10px;
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container geral */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header-home {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: #101010 8px solid;
+  position: relative;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo-wrapper img {
+  width: 40px;
+}
+
+.search-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: 50px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  flex: 1;
+  border: #101010 2px solid;
+}
+
+.search-container i {
+  color: var(--primary-blue);
+  width: 20px;
+  height: 20px;
+}
+
+.search-container i:hover {
+  color: var(--primary-red);
+  cursor: pointer;
+}
+
+.search-container input {
+  background: transparent;
+  color: var(--dark);
+  font-size: 15px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.sort-wrapper, .filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-wrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter-wrap input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--white);
+  border: 2px solid var(--primary-blue);
+  outline: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition: 0.2s;
+}
+
+.filter-wrap input[type="radio"]:checked {
+  background-color: var(--primary-blue);
+}
+
+.filter-wrap input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.filter-wrap input[type="radio"]:checked::after {
+  transform: translate(-50%, -50%) scale(1);
+  background: var(--primary-blue);
+}
+
+.filter-wrap label {
+  font-size: 15px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Listagem de Pokémons */
+.pokemon-list .list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.list-item {
+  background: var(--white);
+  border-radius: 10px;
+  border: var(--primary-blue) 2px solid;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  cursor: pointer;
+  color: var(--primary-blue);
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.list-item:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-yellow);
+}
+
+.list-item img {
+  width: 80px;
+  height: 80px;
+}
+
+#not-found-message {
+  display: none; /* Começa oculto */
+  text-align: center;
+  color: var(--secondary-blue);
+  font-size: 35px;
+  font-weight: 500;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Seção de times */
+.teams-section {
+  background-color: var(--white);
+  border: var(--primary-blue) 2px solid;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.teams-section .team {
+  background-color: var(--white);
+  border: var(--primary-blue) 2px solid;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.teams-section .container h2 {
+  margin-bottom: 20px;
+  color: var(--primary-blue);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-header h3 {
+  font-size: 20px;
+  color: var(--primary-blue);
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.delete-team-btn {
+  background: var(--primary-red);
+  border: none;
+  padding: 10px 15px;
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.delete-team-btn:hover {
+  background: #d32f2f;
+}
+
+/* Estilo da lista de Pokémons */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Cada item da lista */
+ul li {
+  background: var(--primary-yellow);
+  border: 2px solid var(--primary-blue);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Efeito de hover no item */
+ul li:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Botão de Remover */
+ul li button {
+  background: var(--primary-red);
+  border: none;
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+ul li button:hover {
+  background: #d32f2f;
+}
+
+.team-creation .container {
+  background-color: var(--white);
+  border: var(--primary-blue) 2px solid;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Título */
+.team-creation h2 {
+  margin-bottom: 20px;
+  color: var(--primary-blue);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Input de Nome do Time */
+#team-name-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid var(--primary-blue);
+  background-color: var(--white);
+  border-radius: 12px;
+  font-size: 18px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Efeito ao focar no input */
+#team-name-input:focus {
+  border-color: var(--primary-red);
+}
+
+
+/* Ícone dentro do botão */
+.btn-create-team i {
+  margin-right: 8px;
+}
+
+/* Hover no botão */
+.btn-create-team:hover {
+  background-color: var(--secondary-blue);
+}
+
+.btn-create-team {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-create-team:hover {
+  background-color: var(--secondary-blue);
+}
+
+/* Rodapé */
+.footer-home {
+  margin-top: auto;
+  background-color: var(--primary-red);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-wrapper {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .team-creation .container {
+    padding: 20px 15px;
+  }
+}
