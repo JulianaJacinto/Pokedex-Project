@@ -1,0 +1,145 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+/* Variáveis de cores */
+:root {
+  --primary-red: #DA1212;
+  --primary-yellow: #ffca28;
+  --primary-blue: #11468F;
+  --secondary-blue: #041562;
+  --background: #EEEEEE;
+  --white: #ffffff;
+  --gray: #8a8a8a;
+  --dark: #101010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jersey 15', sans-serif;
+}
+
+/* Corpo da página */
+body {
+  min-height: 100vh;
+  background-color: #77acf6;
+  background-image: radial-gradient(#5f95e0 2px, transparent 0px);
+  background-size: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+  
+/* Container do formulário */
+.auth-container {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+  
+/* Títulos */
+.auth-container h1,
+.auth-container h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: var(--primary-blue);
+}
+  
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+  
+/* Campos de input */
+form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+  
+  /* Botão principal */
+form button {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+  
+form button:hover {
+  background-color: #d32f2f;
+}
+  
+/* Links */
+.auth-container p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: var(--dark);
+}
+  
+.auth-container a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+  
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o input com ícone */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+}
+
+/* Ícone na frente */
+.input-wrapper i {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+}
+
+/* Input de texto */
+.input-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  background: transparent;
+}
+
+/* Ícone de mostrar senha */
+.toggle-password {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+  
+/* Responsivo */
+@media (max-width: 500px) {
+  .auth-container {
+      padding: 30px 20px;
+      width: 90%;
+    }
+}
+  
