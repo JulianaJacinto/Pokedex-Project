@@ -68,6 +68,36 @@ npm start
 
 O aplicativo será executado localmente em `http://localhost:3000`.
 
+## 📦 Dependências
+
+Antes de iniciar o projeto, é necessário instalar as dependências necessárias para o funcionamento do frontend e do backend.
+
+### 📁 Backend (Node.js)
+
+No diretório do backend, instale as dependências com:
+
+```bash
+npm install
+```
+
+Principais pacotes utilizados:
+
+| Comando | O que faz |
+|:--------|:----------|
+| `const express = require('express');` | Importa o **Express**, que é o framework que facilita criar o servidor e as rotas da sua aplicação web. Sem ele, o Node.js seria muito "cru" para criar APIs. |
+| `const mysql = require('mysql2');` | Importa o **MySQL2**, que é a biblioteca que permite conectar o Node.js ao banco de dados **MySQL** para executar queries (consultas, inserts, etc). |
+| `const bodyParser = require('body-parser');` | Importa o **Body Parser**, que é um middleware usado para interpretar dados do corpo das requisições HTTP (como formulários `POST` ou `PUT`). Sem ele, o `req.body` viria vazio. |
+| `const path = require('path');` | Importa o módulo nativo **Path** do Node.js, que ajuda a trabalhar com caminhos de arquivos e pastas de maneira segura e compatível com todos os sistemas operacionais (Windows, Linux, Mac). |
+| `const session = require('express-session');` | Importa o **express-session**, que permite gerenciar **sessões** de usuários (por exemplo, guardar informações de login enquanto o usuário está navegando). Ele cria um cookie no navegador e uma sessão no servidor. |
+
+### 📌 Em resumo:
+
+- `express` → Cria o servidor e as rotas
+- `mysql2` → Conecta ao banco de dados
+- `body-parser` → Lê os dados enviados nas requisições
+- `path` → Organiza caminhos de arquivos
+- `express-session` → Gerencia sessões de usuários (login, cookies)
+
 ## 📦 Estrutura do Projeto
 
 ```
