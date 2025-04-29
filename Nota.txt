@@ -1,9 +1,9 @@
 Prezados Responsáveis,
 
 Primeiramente, gostaria de agradecer pela oportunidade de participar do Desafio de Código de sua empresa.
-Embora tenha me dedicado intensamente, infelizmente não consegui atender a algumas das especificações solicitadas, como a utilização do framework Laravel e de determinadas bibliotecas de UI/UX. Utilizei todo o material e conhecimento disponíveis ao meu alcance para desenvolver e concluir este projeto.
+Embora tenha-me dedicado intensamente, infelizmente não consegui atender a algumas das especificações solicitadas, como a utilização do framework Laravel e de determinadas bibliotecas de UI/UX. Utilizei todo o material e conhecimento disponíveis ao meu alcance para desenvolver e concluir este projeto.
 A realização deste desafio foi uma grande oportunidade de aprendizado para mim, permitindo-me estudar e aplicar ferramentas e linguagens que, até então, eu conhecia apenas por recomendações de colegas e professores.
-Espero que apreciem o projeto entregue. Foi uma experiência enriquecedora e prazerosa, e espero, no futuro, poder aprimorá-lo ainda mais.
+Espero que apreciem o projeto entregue, foi uma experiência enriquecedora e prazerosa, espero no futuro, poder aprimorá-lo ainda mais junto a essa empresa.
 
 Atenciosamente,
 Juliana Jacinto
