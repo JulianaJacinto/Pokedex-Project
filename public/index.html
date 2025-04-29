@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/pokemon.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main-container">
+        <header class="header-home">
+            <div class="container">
+                <div class="logo-wrapper">
+                    <img src="img/pokeball.svg" alt="logo pokeball">
+                    <h1>Pokedex - Gerenciamento de Times</h1>
+                </div>
+
+                <div class="search-wrapper">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Pesquise seu Pokémon..." class="search-input body3-fonts" id="search-input">
+                        <i class="fa-regular fa-circle-xmark" id="search-close-icon"></i>
+                    </div>
+
+                    <div class="sort-wrapper">
+                        <div class="filter-wrapper">
+                            <p class="body2-fonts">Procurar por:</p>
+                            <div class="filter-wrap">
+                                <div>
+                                    <input type="radio" id="name" name="filters" value="name" checked>
+                                    <label for="name" class="body3-fonts">Nome</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="number" name="filters" value="number">
+                                    <label for="number" class="body3-fonts">Número</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="team-creation">
+            <div class="container">
+                <h2>Criar Novo Time</h2>
+                <input type="text" id="team-name-input" placeholder="Nome do time..." />
+                <button id="create-team-btn" class="btn-create-team">
+                    <i class="fa-solid fa-plus"></i> Criar Time
+                </button>
+            </div>
+        </section>
+
+        <section class="teams-section">
+            <div class="container">
+                <h2>Seus Times</h2>
+                <div id="teams-container"></div>
+            </div>
+        </section>
+        
+        <section class="pokemon-list">
+            <div class="container">
+                <div class="list-wrapper"></div>
+            </div>
+            <div id="not-found-message" style="display: none;">Sinto muito, mas não consigo encontrar esse Pokémon :(</div>
+        </section>
+    </main>
+    <footer class="footer-home">
+        <div class="container">
+            <p>&copy; 2025 Pokedex Project - Sistema de Gerenciamento de Times | Todos os direitos reservados a Juliana Jacinto</p>
+        </div>
+    </footer>
+</body>
+</html>

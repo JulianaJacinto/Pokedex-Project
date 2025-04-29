@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Pokémon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/pokemon-detail.css">
+  <script src="js/pokemon-detail.js" defer></script>
+</head>
+<body>
+  <main class="detail-main main">
+    <header class="header">
+      <div class="container header-wrapper">
+        <div class="header-wrap">
+          <div class="back-btn-wrap">
+            <button onclick="window.history.back();"><i class="fa-solid fa-arrow-left"></i>Voltar</button>
+          </div>
+        </div>
+        <h1 id="pokemon-name"></h1>
+      </div>
+      <!-- Botão Adicionar ao Time -->
+      <div id="add-to-team-container">
+        <button id="add-to-team-btn">Adicionar ao Time</button>
+        <div id="team-selection-container" class="hidden">
+          <label for="team-selection">Escolha um time:</label>
+          <select id="team-selection"></select>
+          <button id="confirm-add"><i class="fa-solid fa-plus"></i>Adicionar</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="detail-content">
+      <div class="detail-img-wrapper">
+        <div id="pokemon-image"></div>
+      </div>
+
+      <div class="detail-card-detail-wrapper">
+        <div class="power-wrapper" id="power-wrapper"></div>
+
+        <div class="pokemon-detail-wrapper">
+          <div class="pokemon-detail-wrap">
+            <p class="caption-fonts">Peso</p>
+            <div class="pokemon-detail">
+              <p id="pokemon-weight"></p>
+            </div>
+          </div>
+
+          <div class="pokemon-detail-wrap">
+            <p class="caption-fonts">Altura</p>
+            <div class="pokemon-detail">
+              <p id="pokemon-height"></p>
+            </div>
+          </div>
+
+          <div class="pokemon-detail-wrap">
+            <p class="caption-fonts">HP</p>
+            <div class="pokemon-detail">
+              <p id="pokemon-hp"></p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="about-text">Movimentos</h2>
+        <div id="moves-container" class="pokemon-detail move"></div>
+
+        <h2 class="about-text">Habilidades</h2>
+        <div id="abilities-container" class="power-wrapper"></div>
+
+        <h2 class="about-text">Estatísticas</h2>
+        <div id="stats-container"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-home">
+    <div class="container">
+      <p>&copy; 2025 Pokedex Project - Sistema de Gerenciamento de Times | Todos os direitos reservados a Juliana Jacinto</p>
+    </div>
+  </footer>
+</body>
+</html>
